@@ -39,6 +39,7 @@ import React, { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { FaXmark } from "react-icons/fa6";
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 export default function Menubar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,16 +50,20 @@ export default function Menubar() {
 
   return (
     <motion.nav 
-        className={`bg-[#242424] border border-gray-500 ${isOpen? 'rounded-[10px]': 'rounded-[50px]'} text-white px-16 py-6 mx-5 my-6 flex flex-col`}
+        className={`bg-[#242424] border border-gray-500 ${isOpen? 'rounded-[10px]': 'rounded-[50px]'} text-white px-12 py-6 mx-5 my-6 flex flex-col`}
         initial={false}
         animate={isOpen ? 'open' : 'closed'}
         variants={{
-            open: { transition: { ease: 'easeInOut'}},
-            closed: { transition: { ease: 'easeInOut'}}
+            open: { transition: { ease: 'easeInOut', duration: 0.5}},
+            closed: { transition: { ease: 'easeInOut', duration: 0.5}}
         }}
     >
       <div className='flex justify-between items-center'>
-        <h1 className="text-2xl font-bold flex-grow">SAASTA</h1>
+        <h1 className="text-2xl font-bold flex-grow">
+          <Link to={"/"}>
+            SAASTA
+          </Link>
+        </h1>
         <button className='text-2xl focus:outline-none' onClick={toggleMenu}>
           {isOpen ? <FaXmark /> : <FaBars />}
         </button>
@@ -74,6 +79,7 @@ export default function Menubar() {
           <ul className='flex flex-col space-y-2 text-center'>
             <li className="text-lg hover:text-gray-400">Home</li>
             <li className="text-lg hover:text-gray-400">About</li>
+            <li className="text-lg hover:text-gray-400">Blog</li>
             <li className="text-lg hover:text-gray-400">Contact</li>
           </ul>
         </motion.div>
