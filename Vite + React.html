@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://localhost:5173/profile -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="module">
+import RefreshRuntime from "/@react-refresh"
+RefreshRuntime.injectIntoGlobalHook(window)
+window.$RefreshReg$ = () => {}
+window.$RefreshSig$ = () => (type) => type
+window.__vite_plugin_react_preamble_installed__ = true
+</script>
+
+    <script type="module" src="./Vite + React_files/client"></script>
+
+    
+    <link rel="icon" type="image/svg+xml" href="http://localhost:5173/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite + React</title>
+  <style type="text/css" data-vite-dev-id="D:/real-estate/client/src/routes/listPage/listPage.scss">.listPage {
+  display: flex;
+  height: 100%;
+}
+.listPage .listContainer {
+  flex: 3;
+  height: 100%;
+}
+.listPage .listContainer .wrapper {
+  height: 100%;
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  overflow-y: scroll;
+  padding-bottom: 50px;
+}
+.listPage .mapContainer {
+  flex: 2;
+  height: 100%;
+  background-color: #fcf5f3;
+}
+@media (max-width: 1024px) {
+  .listPage .mapContainer {
+    display: none;
+  }
+}</style><style type="text/css" data-vite-dev-id="D:/real-estate/client/src/components/filter/filter.scss">.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.filter h1 {
+  font-weight: 300;
+  font-size: 24px;
+}
+.filter .item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.filter .item label {
+  font-size: 10px;
+}
+.filter .item input,
+.filter .item select {
+  width: 100px;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.filter .top input {
+  width: 100%;
+}
+.filter .bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.filter .bottom button {
+  width: 100px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #fece51;
+}
+.filter .bottom button img {
+  width: 24px;
+  height: 24px;
+}</style><style type="text/css" data-vite-dev-id="D:/real-estate/client/src/components/card/card.scss">.card {
+  display: flex;
+  gap: 20px;
+}
+.card .imageContainer {
+  flex: 2;
+  height: 200px;
+}
+@media (max-width: 738px) {
+  .card .imageContainer {
+    display: none;
+  }
+}
+.card .imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.card .textContainer {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+.card .textContainer img {
+  width: 16px;
+  height: 16px;
+}
+.card .textContainer .title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #444;
+  transition: all 0.4s ease;
+}
+.card .textContainer .title:hover {
+  color: #000;
+  scale: 1.01;
+}
+.card .textContainer .address {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #888;
+}
+.card .textContainer .price {
+  font-size: 20px;
+  font-weight: 300;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgba(254, 205, 81, 0.438);
+  width: max-content;
+}
+.card .textContainer .bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.card .textContainer .bottom .features {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+}
+.card .textContainer .bottom .features .feature {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: whitesmoke;
+  padding: 5px;
+  border-radius: 5px;
+}
+.card .textContainer .bottom .icons {
+  display: flex;
+  gap: 20px;
+}
+.card .textContainer .bottom .icons .icon {
+  border: 1px solid #999;
+  padding: 2px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card .textContainer .bottom .icons:hover {
+  background-color: lightgray;
+}</style><style type="text/css" data-vite-dev-id="D:/real-estate/client/src/components/map/map.scss">.map {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}</style><style type="text/css" data-vite-dev-id="D:/real-estate/client/node_modules/leaflet/dist/leaflet.css">/* required styles */
+
+.leaflet-pane,
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-tile-container,
+.leaflet-pane > svg,
+.leaflet-pane > canvas,
+.leaflet-zoom-box,
+.leaflet-image-layer,
+.leaflet-layer {
+	position: absolute;
+	left: 0;
+	top: 0;
+	}
+.leaflet-container {
+	overflow: hidden;
+	}
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	        user-select: none;
+	  -webkit-user-drag: none;
+	}
+/* Prevents IE11 from highlighting tiles in blue */
+.leaflet-tile::selection {
+	background: transparent;
+}
+/* Safari renders non-retina tile on retina better with this, but Chrome is worse */
+.leaflet-safari .leaflet-tile {
+	image-rendering: -webkit-optimize-contrast;
+	}
+/* hack that prevents hw layers "stretching" when loading new tiles */
+.leaflet-safari .leaflet-tile-container {
+	width: 1600px;
+	height: 1600px;
+	-webkit-transform-origin: 0 0;
+	}
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+	display: block;
+	}
+/* .leaflet-container svg: reset svg max-width decleration shipped in Joomla! (joomla.org) 3.x */
+/* .leaflet-container img: map is broken in FF if you have max-width: 100% on tiles */
+.leaflet-container .leaflet-overlay-pane svg {
+	max-width: none !important;
+	max-height: none !important;
+	}
+.leaflet-container .leaflet-marker-pane img,
+.leaflet-container .leaflet-shadow-pane img,
+.leaflet-container .leaflet-tile-pane img,
+.leaflet-container img.leaflet-image-layer,
+.leaflet-container .leaflet-tile {
+	max-width: none !important;
+	max-height: none !important;
+	width: auto;
+	padding: 0;
+	}
+
+.leaflet-container img.leaflet-tile {
+	/* See: https://bugs.chromium.org/p/chromium/issues/detail?id=600120 */
+	mix-blend-mode: plus-lighter;
+}
+
+.leaflet-container.leaflet-touch-zoom {
+	-ms-touch-action: pan-x pan-y;
+	touch-action: pan-x pan-y;
+	}
+.leaflet-container.leaflet-touch-drag {
+	-ms-touch-action: pinch-zoom;
+	/* Fallback for FF which doesn't support pinch-zoom */
+	touch-action: none;
+	touch-action: pinch-zoom;
+}
+.leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.leaflet-container {
+	-webkit-tap-highlight-color: transparent;
+}
+.leaflet-container a {
+	-webkit-tap-highlight-color: rgba(51, 181, 229, 0.4);
+}
+.leaflet-tile {
+	filter: inherit;
+	visibility: hidden;
+	}
+.leaflet-tile-loaded {
+	visibility: inherit;
+	}
+.leaflet-zoom-box {
+	width: 0;
+	height: 0;
+	-moz-box-sizing: border-box;
+	     box-sizing: border-box;
+	z-index: 800;
+	}
+/* workaround for https://bugzilla.mozilla.org/show_bug.cgi?id=888319 */
+.leaflet-overlay-pane svg {
+	-moz-user-select: none;
+	}
+
+.leaflet-pane         { z-index: 400; }
+
+.leaflet-tile-pane    { z-index: 200; }
+.leaflet-overlay-pane { z-index: 400; }
+.leaflet-shadow-pane  { z-index: 500; }
+.leaflet-marker-pane  { z-index: 600; }
+.leaflet-tooltip-pane   { z-index: 650; }
+.leaflet-popup-pane   { z-index: 700; }
+
+.leaflet-map-pane canvas { z-index: 100; }
+.leaflet-map-pane svg    { z-index: 200; }
+
+.leaflet-vml-shape {
+	width: 1px;
+	height: 1px;
+	}
+.lvml {
+	behavior: url(#default#VML);
+	display: inline-block;
+	position: absolute;
+	}
+
+
+/* control positioning */
+
+.leaflet-control {
+	position: relative;
+	z-index: 800;
+	pointer-events: visiblePainted; /* IE 9-10 doesn't have auto */
+	pointer-events: auto;
+	}
+.leaflet-top,
+.leaflet-bottom {
+	position: absolute;
+	z-index: 1000;
+	pointer-events: none;
+	}
+.leaflet-top {
+	top: 0;
+	}
+.leaflet-right {
+	right: 0;
+	}
+.leaflet-bottom {
+	bottom: 0;
+	}
+.leaflet-left {
+	left: 0;
+	}
+.leaflet-control {
+	float: left;
+	clear: both;
+	}
+.leaflet-right .leaflet-control {
+	float: right;
+	}
+.leaflet-top .leaflet-control {
+	margin-top: 10px;
+	}
+.leaflet-bottom .leaflet-control {
+	margin-bottom: 10px;
+	}
+.leaflet-left .leaflet-control {
+	margin-left: 10px;
+	}
+.leaflet-right .leaflet-control {
+	margin-right: 10px;
+	}
+
+
+/* zoom and fade animations */
+
+.leaflet-fade-anim .leaflet-popup {
+	opacity: 0;
+	-webkit-transition: opacity 0.2s linear;
+	   -moz-transition: opacity 0.2s linear;
+	        transition: opacity 0.2s linear;
+	}
+.leaflet-fade-anim .leaflet-map-pane .leaflet-popup {
+	opacity: 1;
+	}
+.leaflet-zoom-animated {
+	-webkit-transform-origin: 0 0;
+	    -ms-transform-origin: 0 0;
+	        transform-origin: 0 0;
+	}
+svg.leaflet-zoom-animated {
+	will-change: transform;
+}
+
+.leaflet-zoom-anim .leaflet-zoom-animated {
+	-webkit-transition: -webkit-transform 0.25s cubic-bezier(0,0,0.25,1);
+	   -moz-transition:    -moz-transform 0.25s cubic-bezier(0,0,0.25,1);
+	        transition:         transform 0.25s cubic-bezier(0,0,0.25,1);
+	}
+.leaflet-zoom-anim .leaflet-tile,
+.leaflet-pan-anim .leaflet-tile {
+	-webkit-transition: none;
+	   -moz-transition: none;
+	        transition: none;
+	}
+
+.leaflet-zoom-anim .leaflet-zoom-hide {
+	visibility: hidden;
+	}
+
+
+/* cursors */
+
+.leaflet-interactive {
+	cursor: pointer;
+	}
+.leaflet-grab {
+	cursor: -webkit-grab;
+	cursor:    -moz-grab;
+	cursor:         grab;
+	}
+.leaflet-crosshair,
+.leaflet-crosshair .leaflet-interactive {
+	cursor: crosshair;
+	}
+.leaflet-popup-pane,
+.leaflet-control {
+	cursor: auto;
+	}
+.leaflet-dragging .leaflet-grab,
+.leaflet-dragging .leaflet-grab .leaflet-interactive,
+.leaflet-dragging .leaflet-marker-draggable {
+	cursor: move;
+	cursor: -webkit-grabbing;
+	cursor:    -moz-grabbing;
+	cursor:         grabbing;
+	}
+
+/* marker & overlays interactivity */
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-image-layer,
+.leaflet-pane > svg path,
+.leaflet-tile-container {
+	pointer-events: none;
+	}
+
+.leaflet-marker-icon.leaflet-interactive,
+.leaflet-image-layer.leaflet-interactive,
+.leaflet-pane > svg path.leaflet-interactive,
+svg.leaflet-image-layer.leaflet-interactive path {
+	pointer-events: visiblePainted; /* IE 9-10 doesn't have auto */
+	pointer-events: auto;
+	}
+
+/* visual tweaks */
+
+.leaflet-container {
+	background: #ddd;
+	outline-offset: 1px;
+	}
+.leaflet-container a {
+	color: #0078A8;
+	}
+.leaflet-zoom-box {
+	border: 2px dotted #38f;
+	background: rgba(255,255,255,0.5);
+	}
+
+
+/* general typography */
+.leaflet-container {
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-size: 0.75rem;
+	line-height: 1.5;
+	}
+
+
+/* general toolbar styles */
+
+.leaflet-bar {
+	box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+	border-radius: 4px;
+	}
+.leaflet-bar a {
+	background-color: #fff;
+	border-bottom: 1px solid #ccc;
+	width: 26px;
+	height: 26px;
+	line-height: 26px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	}
+.leaflet-bar a,
+.leaflet-control-layers-toggle {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	display: block;
+	}
+.leaflet-bar a:hover,
+.leaflet-bar a:focus {
+	background-color: #f4f4f4;
+	}
+.leaflet-bar a:first-child {
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	}
+.leaflet-bar a:last-child {
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom: none;
+	}
+.leaflet-bar a.leaflet-disabled {
+	cursor: default;
+	background-color: #f4f4f4;
+	color: #bbb;
+	}
+
+.leaflet-touch .leaflet-bar a {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	}
+.leaflet-touch .leaflet-bar a:first-child {
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	}
+.leaflet-touch .leaflet-bar a:last-child {
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	}
+
+/* zoom control */
+
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+	font: bold 18px 'Lucida Console', Monaco, monospace;
+	text-indent: 1px;
+	}
+
+.leaflet-touch .leaflet-control-zoom-in, .leaflet-touch .leaflet-control-zoom-out  {
+	font-size: 22px;
+	}
+
+
+/* layers control */
+
+.leaflet-control-layers {
+	box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+	background: #fff;
+	border-radius: 5px;
+	}
+.leaflet-control-layers-toggle {
+	background-image: url(/node_modules/leaflet/dist/images/layers.png);
+	width: 36px;
+	height: 36px;
+	}
+.leaflet-retina .leaflet-control-layers-toggle {
+	background-image: url(/node_modules/leaflet/dist/images/layers-2x.png);
+	background-size: 26px 26px;
+	}
+.leaflet-touch .leaflet-control-layers-toggle {
+	width: 44px;
+	height: 44px;
+	}
+.leaflet-control-layers .leaflet-control-layers-list,
+.leaflet-control-layers-expanded .leaflet-control-layers-toggle {
+	display: none;
+	}
+.leaflet-control-layers-expanded .leaflet-control-layers-list {
+	display: block;
+	position: relative;
+	}
+.leaflet-control-layers-expanded {
+	padding: 6px 10px 6px 6px;
+	color: #333;
+	background: #fff;
+	}
+.leaflet-control-layers-scrollbar {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding-right: 5px;
+	}
+.leaflet-control-layers-selector {
+	margin-top: 2px;
+	position: relative;
+	top: 1px;
+	}
+.leaflet-control-layers label {
+	display: block;
+	font-size: 13px;
+	font-size: 1.08333em;
+	}
+.leaflet-control-layers-separator {
+	height: 0;
+	border-top: 1px solid #ddd;
+	margin: 5px -10px 5px -6px;
+	}
+
+/* Default icon URLs */
+.leaflet-default-icon-path { /* used only in path-guessing heuristic, see L.Icon.Default */
+	background-image: url(/node_modules/leaflet/dist/images/marker-icon.png);
+	}
+
+
+/* attribution and scale controls */
+
+.leaflet-container .leaflet-control-attribution {
+	background: #fff;
+	background: rgba(255, 255, 255, 0.8);
+	margin: 0;
+	}
+.leaflet-control-attribution,
+.leaflet-control-scale-line {
+	padding: 0 5px;
+	color: #333;
+	line-height: 1.4;
+	}
+.leaflet-control-attribution a {
+	text-decoration: none;
+	}
+.leaflet-control-attribution a:hover,
+.leaflet-control-attribution a:focus {
+	text-decoration: underline;
+	}
+.leaflet-attribution-flag {
+	display: inline !important;
+	vertical-align: baseline !important;
+	width: 1em;
+	height: 0.6669em;
+	}
+.leaflet-left .leaflet-control-scale {
+	margin-left: 5px;
+	}
+.leaflet-bottom .leaflet-control-scale {
+	margin-bottom: 5px;
+	}
+.leaflet-control-scale-line {
+	border: 2px solid #777;
+	border-top: none;
+	line-height: 1.1;
+	padding: 2px 5px 1px;
+	white-space: nowrap;
+	-moz-box-sizing: border-box;
+	     box-sizing: border-box;
+	background: rgba(255, 255, 255, 0.8);
+	text-shadow: 1px 1px #fff;
+	}
+.leaflet-control-scale-line:not(:first-child) {
+	border-top: 2px solid #777;
+	border-bottom: none;
+	margin-top: -2px;
+	}
+.leaflet-control-scale-line:not(:first-child):not(:last-child) {
+	border-bottom: 2px solid #777;
+	}
+
+.leaflet-touch .leaflet-control-attribution,
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+	box-shadow: none;
+	}
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+	border: 2px solid rgba(0,0,0,0.2);
+	background-clip: padding-box;
+	}
+
+
+/* popup */
+
+.leaflet-popup {
+	position: absolute;
+	text-align: center;
+	margin-bottom: 20px;
+	}
+.leaflet-popup-content-wrapper {
+	padding: 1px;
+	text-align: left;
+	border-radius: 12px;
+	}
+.leaflet-popup-content {
+	margin: 13px 24px 13px 20px;
+	line-height: 1.3;
+	font-size: 13px;
+	font-size: 1.08333em;
+	min-height: 1px;
+	}
+.leaflet-popup-content p {
+	margin: 17px 0;
+	margin: 1.3em 0;
+	}
+.leaflet-popup-tip-container {
+	width: 40px;
+	height: 20px;
+	position: absolute;
+	left: 50%;
+	margin-top: -1px;
+	margin-left: -20px;
+	overflow: hidden;
+	pointer-events: none;
+	}
+.leaflet-popup-tip {
+	width: 17px;
+	height: 17px;
+	padding: 1px;
+
+	margin: -10px auto 0;
+	pointer-events: auto;
+
+	-webkit-transform: rotate(45deg);
+	   -moz-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	        transform: rotate(45deg);
+	}
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+	background: white;
+	color: #333;
+	box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+	}
+.leaflet-container a.leaflet-popup-close-button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: none;
+	text-align: center;
+	width: 24px;
+	height: 24px;
+	font: 16px/24px Tahoma, Verdana, sans-serif;
+	color: #757575;
+	text-decoration: none;
+	background: transparent;
+	}
+.leaflet-container a.leaflet-popup-close-button:hover,
+.leaflet-container a.leaflet-popup-close-button:focus {
+	color: #585858;
+	}
+.leaflet-popup-scrolled {
+	overflow: auto;
+	}
+
+.leaflet-oldie .leaflet-popup-content-wrapper {
+	-ms-zoom: 1;
+	}
+.leaflet-oldie .leaflet-popup-tip {
+	width: 24px;
+	margin: 0 auto;
+
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678)";
+	filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678);
+	}
+
+.leaflet-oldie .leaflet-control-zoom,
+.leaflet-oldie .leaflet-control-layers,
+.leaflet-oldie .leaflet-popup-content-wrapper,
+.leaflet-oldie .leaflet-popup-tip {
+	border: 1px solid #999;
+	}
+
+
+/* div icon */
+
+.leaflet-div-icon {
+	background: #fff;
+	border: 1px solid #666;
+	}
+
+
+/* Tooltip */
+/* Base styles for the element that has a tooltip */
+.leaflet-tooltip {
+	position: absolute;
+	padding: 6px;
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 3px;
+	color: #222;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+	}
+.leaflet-tooltip.leaflet-interactive {
+	cursor: pointer;
+	pointer-events: auto;
+	}
+.leaflet-tooltip-top:before,
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+	position: absolute;
+	pointer-events: none;
+	border: 6px solid transparent;
+	background: transparent;
+	content: "";
+	}
+
+/* Directions */
+
+.leaflet-tooltip-bottom {
+	margin-top: 6px;
+}
+.leaflet-tooltip-top {
+	margin-top: -6px;
+}
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-top:before {
+	left: 50%;
+	margin-left: -6px;
+	}
+.leaflet-tooltip-top:before {
+	bottom: 0;
+	margin-bottom: -12px;
+	border-top-color: #fff;
+	}
+.leaflet-tooltip-bottom:before {
+	top: 0;
+	margin-top: -12px;
+	margin-left: -6px;
+	border-bottom-color: #fff;
+	}
+.leaflet-tooltip-left {
+	margin-left: -6px;
+}
+.leaflet-tooltip-right {
+	margin-left: 6px;
+}
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+	top: 50%;
+	margin-top: -6px;
+	}
+.leaflet-tooltip-left:before {
+	right: 0;
+	margin-right: -12px;
+	border-left-color: #fff;
+	}
+.leaflet-tooltip-right:before {
+	left: 0;
+	margin-left: -12px;
+	border-right-color: #fff;
+	}
+
+/* Printing */
+
+@media print {
+	/* Prevent printers from removing background-images of controls. */
+	.leaflet-control {
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+		}
+	}
+</style><style type="text/css" data-vite-dev-id="D:/real-estate/client/src/components/pin/pin.scss">.popupContainer {
+  display: flex;
+  gap: 20px;
+}
+.popupContainer img {
+  width: 64px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.popupContainer .textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}</style><style type="text/css" data-vite-dev-id="D:/real-estate/client/src/components/searchBar/searchBar.scss">.searchBar .type button {
+  padding: 16px 36px;
+  border: 1px solid #999;
+  border-bottom: none;
+  cursor: pointer;
+  background-color: white;
+  text-transform: capitalize;
+}
+.searchBar .type button.active {
+  background-color: black;
+  color: white;
+}
+.searchBar .type button:first-child {
+  border-top-left-radius: 5px;
+  border-right: none;
+}
+.searchBar .type button:last-child {
+  border-top-right-radius: 5px;
+  border-left: none;
+}
+.searchBar form {
+  border: 1px solid #999;
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  gap: 5px;
+}
+@media (max-width: 738px) {
+  .searchBar form {
+    flex-direction: column;
+    border: none;
+  }
+}
+.searchBar form input {
+  border: none;
+  padding: 0px 10px;
+  width: 200px;
+}
+@media (max-width: 1366px) {
+  .searchBar form input {
+    padding: 0px 5px;
+  }
+  .searchBar form input:nth-child(2), .searchBar form input:nth-child(3) {
+    width: 140px;
+  }
+}
+@media (max-width: 1024px) {
+  .searchBar form input {
+    width: 200px;
+  }
+  .searchBar form input:nth-child(2), .searchBar form input:nth-child(3) {
+    width: 200px;
+  }
+}
+@media (max-width: 738px) {
+  .searchBar form input {
+    width: auto;
+    padding: 20px;
+    border: 1px solid #999;
+  }
+  .searchBar form input:nth-child(2), .searchBar form input:nth-child(3) {
+    width: auto;
+  }
+}
+.searchBar form button {
+  border: none;
+  cursor: pointer;
+  background-color: #fece51;
+  flex: 1;
+}
+@media (max-width: 738px) {
+  .searchBar form button {
+    padding: 10px;
+  }
+}
+.searchBar form button img {
+  width: 24px;
+  height: 24px;
+}</style><style type="text/css" data-vite-dev-id="D:/real-estate/client/src/routes/homePage/homePage.scss">.homePage {
+  display: flex;
+  height: 100%;
+}
+.homePage .textContainer {
+  flex: 3;
+}
+.homePage .textContainer .wrapper {
+  padding-right: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  height: 100%;
+}
+@media (max-width: 1366px) {
+  .homePage .textContainer .wrapper {
+    padding-right: 50px;
+  }
+}
+@media (max-width: 1024px) {
+  .homePage .textContainer .wrapper {
+    padding-right: 0;
+  }
+}
+@media (max-width: 738px) {
+  .homePage .textContainer .wrapper {
+    justify-content: flex-start;
+  }
+}
+.homePage .textContainer .wrapper .title {
+  font-size: 64px;
+}
+@media (max-width: 1366px) {
+  .homePage .textContainer .wrapper .title {
+    font-size: 48px;
+  }
+}
+.homePage .textContainer .wrapper .boxes {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 738px) {
+  .homePage .textContainer .wrapper .boxes {
+    display: none;
+  }
+}
+.homePage .textContainer .wrapper .boxes h1 {
+  font-size: 36px;
+}
+@media (max-width: 1366px) {
+  .homePage .textContainer .wrapper .boxes h1 {
+    font-size: 32px;
+  }
+}
+.homePage .textContainer .wrapper .boxes h2 {
+  font-size: 20px;
+  font-weight: 300;
+}
+.homePage .imgContainer {
+  flex: 2;
+  background-color: #fcf5f3;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: visible;
+}
+@media (max-width: 1024px) {
+  .homePage .imgContainer {
+    display: none;
+  }
+}
+.homePage .imgContainer img {
+  width: 115%;
+  position: absolute;
+  right: 0;
+}
+@media (max-width: 1366px) {
+  .homePage .imgContainer img {
+    width: 105%;
+  }
+}</style><style type="text/css" data-vite-dev-id="D:/real-estate/client/src/routes/layout/layout.scss">.layout {
+  height: 100vh;
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1366px) {
+  .layout {
+    max-width: 1280px;
+  }
+}
+@media (max-width: 1024px) {
+  .layout {
+    max-width: 768px;
+  }
+}
+@media (max-width: 738px) {
+  .layout {
+    max-width: 640px;
+  }
+}
+.layout .content {
+  height: calc(100vh - 100px);
+}</style><style type="text/css" data-vite-dev-id="D:/real-estate/client/src/components/navbar/navbar.scss">nav {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav a {
+  transition: all 0.4s ease;
+}
+@media (max-width: 738px) {
+  nav a {
+    display: none;
+  }
+}
+nav a:hover {
+  scale: 1.05;
+}
+nav .left {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+nav .left .logo {
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+nav .left .logo img {
+  width: 28px;
+}
+@media (max-width: 1024px) {
+  nav .left .logo span {
+    display: none;
+  }
+}
+@media (max-width: 738px) {
+  nav .left .logo span {
+    display: initial;
+  }
+}
+nav .right {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #fcf5f3;
+  height: 100%;
+}
+@media (max-width: 1024px) {
+  nav .right {
+    background-color: transparent;
+  }
+}
+nav .right a {
+  padding: 12px 24px;
+  margin: 20px;
+}
+nav .right .user {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+nav .right .user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+@media (max-width: 738px) {
+  nav .right .user span {
+    display: none;
+  }
+}
+nav .right .user .profile {
+  padding: 12px 24px;
+  background-color: #fece51;
+  cursor: pointer;
+  border: none;
+  position: relative;
+}
+nav .right .user .profile .notification {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .right .register {
+  background-color: #fece51;
+}
+nav .right .menuIcon {
+  display: none;
+  z-index: 999;
+}
+nav .right .menuIcon img {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+@media (max-width: 738px) {
+  nav .right .menuIcon {
+    display: inline;
+  }
+}
+nav .right .menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  color: white;
+  height: 100vh;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+nav .right .menu.active {
+  right: 0;
+  display: flex;
+  opacity: 1;
+}
+@media (max-width: 738px) {
+  nav .right .menu a {
+    display: initial;
+  }
+}</style><style type="text/css" data-vite-dev-id="D:/real-estate/client/src/routes/singlePage/singlePage.scss">.singlePage {
+  display: flex;
+  height: 100%;
+}
+@media (max-width: 1024px) {
+  .singlePage {
+    flex-direction: column;
+    overflow: scroll;
+  }
+}
+.singlePage .details {
+  flex: 3;
+  height: 100%;
+  overflow-y: scroll;
+}
+@media (max-width: 1024px) {
+  .singlePage .details {
+    flex: none;
+    height: max-content;
+    margin-bottom: 50px;
+  }
+}
+.singlePage .details .wrapper {
+  padding-right: 50px;
+}
+.singlePage .details .wrapper .info {
+  margin-top: 50px;
+}
+.singlePage .details .wrapper .info .top {
+  display: flex;
+  justify-content: space-between;
+}
+.singlePage .details .wrapper .info .top .post {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.singlePage .details .wrapper .info .top .post h1 {
+  font-weight: 400;
+}
+.singlePage .details .wrapper .info .top .post .address {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  color: #888;
+  font-size: 14px;
+}
+.singlePage .details .wrapper .info .top .post .address img {
+  height: 16px;
+  width: 16px;
+}
+.singlePage .details .wrapper .info .top .post .price {
+  padding: 5px;
+  background-color: rgba(254, 205, 81, 0.438);
+  border-radius: 5px;
+  width: max-content;
+  font-size: 20px;
+  font-weight: 300;
+}
+.singlePage .details .wrapper .info .top .user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 0px 50px;
+  border-radius: 10px;
+  background-color: rgba(254, 205, 81, 0.209);
+  font-weight: 600;
+}
+.singlePage .details .wrapper .info .top .user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.singlePage .details .wrapper .info .bottom {
+  margin-top: 50px;
+  color: #555;
+  line-height: 20px;
+}
+.singlePage .features {
+  flex: 2;
+  background-color: #fcf5f3;
+  height: 100%;
+  overflow-y: scroll;
+}
+@media (max-width: 1024px) {
+  .singlePage .features {
+    flex: none;
+    height: max-content;
+    margin-bottom: 50px;
+  }
+}
+.singlePage .features .wrapper {
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.singlePage .features .wrapper img {
+  width: 24px;
+  height: 24px;
+}
+.singlePage .features .wrapper .title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.singlePage .features .wrapper .feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.singlePage .features .wrapper .feature img {
+  background-color: rgba(254, 205, 81, 0.209);
+}
+.singlePage .features .wrapper .feature .featureText span {
+  font-weight: bold;
+}
+.singlePage .features .wrapper .feature .featureText p {
+  font-size: 14px;
+}
+.singlePage .features .wrapper .listVertical {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 10px;
+  background-color: white;
+  border-radius: 10px;
+}
+.singlePage .features .wrapper .listHorizontal {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px;
+  background-color: white;
+  border-radius: 10px;
+}
+.singlePage .features .wrapper .sizes {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1366px) {
+  .singlePage .features .wrapper .sizes {
+    font-size: 12px;
+  }
+}
+.singlePage .features .wrapper .sizes .size {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.singlePage .features .wrapper .mapContainer {
+  width: 100%;
+  height: 200px;
+}
+.singlePage .features .wrapper .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.singlePage .features .wrapper .buttons button {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding: 20px;
+  gap: 5px;
+  background-color: white;
+  border: 1px solid #fece51;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.singlePage .features .wrapper .buttons button img {
+  height: 16px;
+  width: 16px;
+}</style><style type="text/css" data-vite-dev-id="D:/real-estate/client/src/components/slider/slider.scss">.slider {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  gap: 20px;
+}
+.slider .fullSlider {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+}
+.slider .fullSlider .arrow {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider .fullSlider .arrow img {
+  width: 50px;
+}
+@media (max-width: 1024px) {
+  .slider .fullSlider .arrow img {
+    width: 30px;
+  }
+}
+@media (max-width: 738px) {
+  .slider .fullSlider .arrow img {
+    width: 20px;
+  }
+}
+.slider .fullSlider .arrow img.right {
+  transform: rotate(180deg);
+}
+.slider .fullSlider .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  padding: 50px;
+  cursor: pointer;
+}
+.slider .fullSlider .imageContainer {
+  flex: 10;
+}
+.slider .fullSlider .imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.slider .bigImage {
+  flex: 3;
+}
+.slider .smallImages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+.slider .smallImages img {
+  height: 100px;
+}</style><style type="text/css" data-vite-dev-id="D:/real-estate/client/src/routes/profilePage/profilePage.scss">.profilePage {
+  display: flex;
+  height: 100%;
+}
+@media (max-width: 1024px) {
+  .profilePage {
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+}
+.profilePage .details {
+  flex: 3;
+  overflow-y: scroll;
+  padding-bottom: 50px;
+}
+@media (max-width: 1024px) {
+  .profilePage .details {
+    flex: none;
+    height: max-content;
+  }
+}
+.profilePage .details .wrapper {
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.profilePage .details .wrapper .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.profilePage .details .wrapper .title h1 {
+  font-weight: 300;
+}
+.profilePage .details .wrapper .title button {
+  padding: 12px 24px;
+  background-color: #fece51;
+  cursor: pointer;
+  border: none;
+}
+.profilePage .details .wrapper .info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.profilePage .details .wrapper .info span {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.profilePage .details .wrapper .info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.profilePage .chatContainer {
+  flex: 2;
+  background-color: #fcf5f3;
+  height: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+@media (max-width: 1024px) {
+  .profilePage .chatContainer {
+    flex: none;
+    height: max-content;
+  }
+}
+.profilePage .chatContainer .wrapper {
+  padding: 0px 20px;
+  height: 100%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}</style><style type="text/css" data-vite-dev-id="D:/real-estate/client/src/index.css">/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+</style><style type="text/css" data-vite-dev-id="D:/real-estate/client/src/index.scss">* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  overflow: hidden;
+}</style><style type="text/css" data-vite-dev-id="D:/real-estate/client/src/components/list/list.scss">.list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}</style><style type="text/css" data-vite-dev-id="D:/real-estate/client/src/components/chat/chat.scss">.chat {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.chat .messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: scroll;
+}
+.chat .messages h1 {
+  font-weight: 300;
+}
+.chat .messages .message {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+.chat .messages .message img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.chat .messages .message span {
+  font-weight: bold;
+}
+.chat .chatBox {
+  flex: 1;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.chat .chatBox .top {
+  background-color: rgba(247, 193, 75, 0.5215686275);
+  padding: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.chat .chatBox .top .user {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.chat .chatBox .top .user img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.chat .chatBox .top .close {
+  cursor: pointer;
+}
+.chat .chatBox .center {
+  height: 280px;
+  overflow-y: scroll;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.chat .chatBox .center .chatMessage {
+  width: 50%;
+}
+.chat .chatBox .center .chatMessage.own {
+  align-self: flex-end;
+  text-align: right;
+}
+.chat .chatBox .center .chatMessage span {
+  font-size: 12px;
+  background-color: rgba(247, 193, 75, 0.5215686275);
+  padding: 2px;
+  border-radius: 5px;
+}
+.chat .chatBox .bottom {
+  border-top: 1px solid rgba(247, 193, 75, 0.5215686275);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.chat .chatBox .bottom textarea {
+  flex: 3;
+  height: 100%;
+  border: none;
+  padding: 20px;
+}
+.chat .chatBox .bottom button {
+  height: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: rgba(247, 193, 75, 0.5215686275);
+  border: none;
+  cursor: pointer;
+}</style></head>
+  <body>
+    <div id="root"><div class="layout"><div class="navbar"><nav><div class="left"><a class="logo" href="http://localhost:5173/"><img src="./Vite + React_files/logo.png" alt=""><span>DevEstate</span></a><a href="http://localhost:5173/">Home</a><a href="http://localhost:5173/">About</a><a href="http://localhost:5173/">Contact</a><a href="http://localhost:5173/">Agents</a></div><div class="right"><div class="user"><img src="./Vite + React_files/pexels-photo-91227.jpeg" alt=""><span>John Doe</span><a class="profile" href="http://localhost:5173/profile"><div class="notification">3</div><span>Profile</span></a></div><div class="menuIcon"><img src="./Vite + React_files/menu.png" alt=""></div><div class="menu"><a href="http://localhost:5173/">Home</a><a href="http://localhost:5173/">About</a><a href="http://localhost:5173/">Contact</a><a href="http://localhost:5173/">Agents</a><a href="http://localhost:5173/">Sign In</a><a href="http://localhost:5173/">Sign Up</a></div></div></nav></div><div class="content"><div class="profilePage"><div class="details"><div class="wrapper"><div class="title"><h1>User Information</h1><button>Update Profile</button></div><div class="info"><span>Avatar: <img src="./Vite + React_files/pexels-photo-91227.jpeg" alt=""></span><span>Username: <b>John Doe</b></span><span>Email: <b>johndoe@gmail.com</b></span></div><div class="title"><h1>My List</h1><button>Create new post</button></div><div class="list"><div class="card"><a class="imageContainer" href="http://localhost:5173/1"><img src="./Vite + React_files/pexels-photo-1918291.jpeg" alt=""></a><div class="textContainer"><h2 class="title"><a href="http://localhost:5173/1">A Great Apartment Next to the Beach!</a></h2><p class="address"><img src="./Vite + React_files/pin.png" alt=""><span>456 Park Avenue, London</span></p><p class="price">$ 1000</p><div class="bottom"><div class="features"><div class="feature"><img src="./Vite + React_files/bed.png" alt=""><span>2 bedroom</span></div><div class="feature"><img src="./Vite + React_files/bath.png" alt=""><span>1 bathroom</span></div></div><div class="icons"><div class="icon"><img src="./Vite + React_files/save.png" alt=""></div><div class="icon"><img src="./Vite + React_files/chat.png" alt=""></div></div></div></div></div><div class="card"><a class="imageContainer" href="http://localhost:5173/2"><img src="./Vite + React_files/pexels-photo-1428348.jpeg" alt=""></a><div class="textContainer"><h2 class="title"><a href="http://localhost:5173/2">An Awesome Apartment Near the Park! Almost too good to be true!</a></h2><p class="address"><img src="./Vite + React_files/pin.png" alt=""><span>789 Oxford Street, London</span></p><p class="price">$ 1500</p><div class="bottom"><div class="features"><div class="feature"><img src="./Vite + React_files/bed.png" alt=""><span>3 bedroom</span></div><div class="feature"><img src="./Vite + React_files/bath.png" alt=""><span>2 bathroom</span></div></div><div class="icons"><div class="icon"><img src="./Vite + React_files/save.png" alt=""></div><div class="icon"><img src="./Vite + React_files/chat.png" alt=""></div></div></div></div></div><div class="card"><a class="imageContainer" href="http://localhost:5173/3"><img src="./Vite + React_files/pexels-photo-2062426.jpeg" alt=""></a><div class="textContainer"><h2 class="title"><a href="http://localhost:5173/3">A New Apartment in the City!</a></h2><p class="address"><img src="./Vite + React_files/pin.png" alt=""><span>101 Baker Street, London</span></p><p class="price">$ 800</p><div class="bottom"><div class="features"><div class="feature"><img src="./Vite + React_files/bed.png" alt=""><span>1 bedroom</span></div><div class="feature"><img src="./Vite + React_files/bath.png" alt=""><span>1 bathroom</span></div></div><div class="icons"><div class="icon"><img src="./Vite + React_files/save.png" alt=""></div><div class="icon"><img src="./Vite + React_files/chat.png" alt=""></div></div></div></div></div><div class="card"><a class="imageContainer" href="http://localhost:5173/4"><img src="./Vite + React_files/pexels-photo-2467285.jpeg" alt=""></a><div class="textContainer"><h2 class="title"><a href="http://localhost:5173/4">Great Location! Great Price! Great Apartment!</a></h2><p class="address"><img src="./Vite + React_files/pin.png" alt=""><span>234 Kingsway, London,</span></p><p class="price">$ 1000</p><div class="bottom"><div class="features"><div class="feature"><img src="./Vite + React_files/bed.png" alt=""><span>2 bedroom</span></div><div class="feature"><img src="./Vite + React_files/bath.png" alt=""><span>1 bathroom</span></div></div><div class="icons"><div class="icon"><img src="./Vite + React_files/save.png" alt=""></div><div class="icon"><img src="./Vite + React_files/chat.png" alt=""></div></div></div></div></div><div class="card"><a class="imageContainer" href="http://localhost:5173/5"><img src="./Vite + React_files/pexels-photo-276625.jpeg" alt=""></a><div class="textContainer"><h2 class="title"><a href="http://localhost:5173/5">Apartment 5</a></h2><p class="address"><img src="./Vite + React_files/pin.png" alt=""><span>567 Victoria Road, London</span></p><p class="price">$ 1500</p><div class="bottom"><div class="features"><div class="feature"><img src="./Vite + React_files/bed.png" alt=""><span>3 bedroom</span></div><div class="feature"><img src="./Vite + React_files/bath.png" alt=""><span>2 bathroom</span></div></div><div class="icons"><div class="icon"><img src="./Vite + React_files/save.png" alt=""></div><div class="icon"><img src="./Vite + React_files/chat.png" alt=""></div></div></div></div></div><div class="card"><a class="imageContainer" href="http://localhost:5173/6"><img src="./Vite + React_files/pexels-photo-271816.jpeg" alt=""></a><div class="textContainer"><h2 class="title"><a href="http://localhost:5173/6">Apartment 6</a></h2><p class="address"><img src="./Vite + React_files/pin.png" alt=""><span>890 Regent Street, London</span></p><p class="price">$ 800</p><div class="bottom"><div class="features"><div class="feature"><img src="./Vite + React_files/bed.png" alt=""><span>1 bedroom</span></div><div class="feature"><img src="./Vite + React_files/bath.png" alt=""><span>1 bathroom</span></div></div><div class="icons"><div class="icon"><img src="./Vite + React_files/save.png" alt=""></div><div class="icon"><img src="./Vite + React_files/chat.png" alt=""></div></div></div></div></div><div class="card"><a class="imageContainer" href="http://localhost:5173/7"><img src="./Vite + React_files/pexels-photo-2029667.jpeg" alt=""></a><div class="textContainer"><h2 class="title"><a href="http://localhost:5173/7">Apartment 7</a></h2><p class="address"><img src="./Vite + React_files/pin.png" alt=""><span>112 Piccadilly, London</span></p><p class="price">$ 1000</p><div class="bottom"><div class="features"><div class="feature"><img src="./Vite + React_files/bed.png" alt=""><span>2 bedroom</span></div><div class="feature"><img src="./Vite + React_files/bath.png" alt=""><span>1 bathroom</span></div></div><div class="icons"><div class="icon"><img src="./Vite + React_files/save.png" alt=""></div><div class="icon"><img src="./Vite + React_files/chat.png" alt=""></div></div></div></div></div><div class="card"><a class="imageContainer" href="http://localhost:5173/8"><img src="./Vite + React_files/pexels-photo-276724.jpeg" alt=""></a><div class="textContainer"><h2 class="title"><a href="http://localhost:5173/8">Apartment 8</a></h2><p class="address"><img src="./Vite + React_files/pin.png" alt=""><span>8765 Main High Street, London</span></p><p class="price">$ 1500</p><div class="bottom"><div class="features"><div class="feature"><img src="./Vite + React_files/bed.png" alt=""><span>3 bedroom</span></div><div class="feature"><img src="./Vite + React_files/bath.png" alt=""><span>2 bathroom</span></div></div><div class="icons"><div class="icon"><img src="./Vite + React_files/save.png" alt=""></div><div class="icon"><img src="./Vite + React_files/chat.png" alt=""></div></div></div></div></div></div><div class="title"><h1>Saved List</h1></div><div class="list"><div class="card"><a class="imageContainer" href="http://localhost:5173/1"><img src="./Vite + React_files/pexels-photo-1918291.jpeg" alt=""></a><div class="textContainer"><h2 class="title"><a href="http://localhost:5173/1">A Great Apartment Next to the Beach!</a></h2><p class="address"><img src="./Vite + React_files/pin.png" alt=""><span>456 Park Avenue, London</span></p><p class="price">$ 1000</p><div class="bottom"><div class="features"><div class="feature"><img src="./Vite + React_files/bed.png" alt=""><span>2 bedroom</span></div><div class="feature"><img src="./Vite + React_files/bath.png" alt=""><span>1 bathroom</span></div></div><div class="icons"><div class="icon"><img src="./Vite + React_files/save.png" alt=""></div><div class="icon"><img src="./Vite + React_files/chat.png" alt=""></div></div></div></div></div><div class="card"><a class="imageContainer" href="http://localhost:5173/2"><img src="./Vite + React_files/pexels-photo-1428348.jpeg" alt=""></a><div class="textContainer"><h2 class="title"><a href="http://localhost:5173/2">An Awesome Apartment Near the Park! Almost too good to be true!</a></h2><p class="address"><img src="./Vite + React_files/pin.png" alt=""><span>789 Oxford Street, London</span></p><p class="price">$ 1500</p><div class="bottom"><div class="features"><div class="feature"><img src="./Vite + React_files/bed.png" alt=""><span>3 bedroom</span></div><div class="feature"><img src="./Vite + React_files/bath.png" alt=""><span>2 bathroom</span></div></div><div class="icons"><div class="icon"><img src="./Vite + React_files/save.png" alt=""></div><div class="icon"><img src="./Vite + React_files/chat.png" alt=""></div></div></div></div></div><div class="card"><a class="imageContainer" href="http://localhost:5173/3"><img src="./Vite + React_files/pexels-photo-2062426.jpeg" alt=""></a><div class="textContainer"><h2 class="title"><a href="http://localhost:5173/3">A New Apartment in the City!</a></h2><p class="address"><img src="./Vite + React_files/pin.png" alt=""><span>101 Baker Street, London</span></p><p class="price">$ 800</p><div class="bottom"><div class="features"><div class="feature"><img src="./Vite + React_files/bed.png" alt=""><span>1 bedroom</span></div><div class="feature"><img src="./Vite + React_files/bath.png" alt=""><span>1 bathroom</span></div></div><div class="icons"><div class="icon"><img src="./Vite + React_files/save.png" alt=""></div><div class="icon"><img src="./Vite + React_files/chat.png" alt=""></div></div></div></div></div><div class="card"><a class="imageContainer" href="http://localhost:5173/4"><img src="./Vite + React_files/pexels-photo-2467285.jpeg" alt=""></a><div class="textContainer"><h2 class="title"><a href="http://localhost:5173/4">Great Location! Great Price! Great Apartment!</a></h2><p class="address"><img src="./Vite + React_files/pin.png" alt=""><span>234 Kingsway, London,</span></p><p class="price">$ 1000</p><div class="bottom"><div class="features"><div class="feature"><img src="./Vite + React_files/bed.png" alt=""><span>2 bedroom</span></div><div class="feature"><img src="./Vite + React_files/bath.png" alt=""><span>1 bathroom</span></div></div><div class="icons"><div class="icon"><img src="./Vite + React_files/save.png" alt=""></div><div class="icon"><img src="./Vite + React_files/chat.png" alt=""></div></div></div></div></div><div class="card"><a class="imageContainer" href="http://localhost:5173/5"><img src="./Vite + React_files/pexels-photo-276625.jpeg" alt=""></a><div class="textContainer"><h2 class="title"><a href="http://localhost:5173/5">Apartment 5</a></h2><p class="address"><img src="./Vite + React_files/pin.png" alt=""><span>567 Victoria Road, London</span></p><p class="price">$ 1500</p><div class="bottom"><div class="features"><div class="feature"><img src="./Vite + React_files/bed.png" alt=""><span>3 bedroom</span></div><div class="feature"><img src="./Vite + React_files/bath.png" alt=""><span>2 bathroom</span></div></div><div class="icons"><div class="icon"><img src="./Vite + React_files/save.png" alt=""></div><div class="icon"><img src="./Vite + React_files/chat.png" alt=""></div></div></div></div></div><div class="card"><a class="imageContainer" href="http://localhost:5173/6"><img src="./Vite + React_files/pexels-photo-271816.jpeg" alt=""></a><div class="textContainer"><h2 class="title"><a href="http://localhost:5173/6">Apartment 6</a></h2><p class="address"><img src="./Vite + React_files/pin.png" alt=""><span>890 Regent Street, London</span></p><p class="price">$ 800</p><div class="bottom"><div class="features"><div class="feature"><img src="./Vite + React_files/bed.png" alt=""><span>1 bedroom</span></div><div class="feature"><img src="./Vite + React_files/bath.png" alt=""><span>1 bathroom</span></div></div><div class="icons"><div class="icon"><img src="./Vite + React_files/save.png" alt=""></div><div class="icon"><img src="./Vite + React_files/chat.png" alt=""></div></div></div></div></div><div class="card"><a class="imageContainer" href="http://localhost:5173/7"><img src="./Vite + React_files/pexels-photo-2029667.jpeg" alt=""></a><div class="textContainer"><h2 class="title"><a href="http://localhost:5173/7">Apartment 7</a></h2><p class="address"><img src="./Vite + React_files/pin.png" alt=""><span>112 Piccadilly, London</span></p><p class="price">$ 1000</p><div class="bottom"><div class="features"><div class="feature"><img src="./Vite + React_files/bed.png" alt=""><span>2 bedroom</span></div><div class="feature"><img src="./Vite + React_files/bath.png" alt=""><span>1 bathroom</span></div></div><div class="icons"><div class="icon"><img src="./Vite + React_files/save.png" alt=""></div><div class="icon"><img src="./Vite + React_files/chat.png" alt=""></div></div></div></div></div><div class="card"><a class="imageContainer" href="http://localhost:5173/8"><img src="./Vite + React_files/pexels-photo-276724.jpeg" alt=""></a><div class="textContainer"><h2 class="title"><a href="http://localhost:5173/8">Apartment 8</a></h2><p class="address"><img src="./Vite + React_files/pin.png" alt=""><span>8765 Main High Street, London</span></p><p class="price">$ 1500</p><div class="bottom"><div class="features"><div class="feature"><img src="./Vite + React_files/bed.png" alt=""><span>3 bedroom</span></div><div class="feature"><img src="./Vite + React_files/bath.png" alt=""><span>2 bathroom</span></div></div><div class="icons"><div class="icon"><img src="./Vite + React_files/save.png" alt=""></div><div class="icon"><img src="./Vite + React_files/chat.png" alt=""></div></div></div></div></div></div></div></div><div class="chatContainer"><div class="wrapper"><div class="chat"><div class="messages"><h1>Messages</h1><div class="message"><img src="./Vite + React_files/pexels-photo-91227.jpeg" alt=""><span>John Doe</span><p>Lorem ipsum dolor sit amet...</p></div><div class="message"><img src="./Vite + React_files/pexels-photo-91227.jpeg" alt=""><span>John Doe</span><p>Lorem ipsum dolor sit amet...</p></div><div class="message"><img src="./Vite + React_files/pexels-photo-91227.jpeg" alt=""><span>John Doe</span><p>Lorem ipsum dolor sit amet...</p></div><div class="message"><img src="./Vite + React_files/pexels-photo-91227.jpeg" alt=""><span>John Doe</span><p>Lorem ipsum dolor sit amet...</p></div><div class="message"><img src="./Vite + React_files/pexels-photo-91227.jpeg" alt=""><span>John Doe</span><p>Lorem ipsum dolor sit amet...</p></div></div><div class="chatBox"><div class="top"><div class="user"><img src="./Vite + React_files/pexels-photo-91227.jpeg" alt="">John Doe</div><div class="close">X</div></div><div class="center"><div class="chatMessage"><p>Lorem ipsum dolor sit amet</p><span>1 Hour Ago</span></div><div class="chatMessage own"><p>Lorem ipsum dolor sit amet</p><span>1 Hour Ago</span></div><div class="chatMessage"><p>Lorem ipsum dolor sit amet</p><span>1 Hour Ago</span></div><div class="chatMessage own"><p>Lorem ipsum dolor sit amet</p><span>1 Hour Ago</span></div><div class="chatMessage"><p>Lorem ipsum dolor sit amet</p><span>1 Hour Ago</span></div><div class="chatMessage own"><p>Lorem ipsum dolor sit amet</p><span>1 Hour Ago</span></div><div class="chatMessage"><p>Lorem ipsum dolor sit amet</p><span>1 Hour Ago</span></div></div><div class="bottom"><textarea></textarea><button>Send</button></div></div></div></div></div></div></div></div></div>
+    <script type="module" src="./Vite + React_files/main.jsx"></script>
+  
+
+</body></html>
