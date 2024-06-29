@@ -73,22 +73,22 @@ export default function Home() {
                     </div>
                 </div>
 
-                <img src="../../public/image.webp" alt="image" className='w-[98%] lg:w-[95%] mt-5'/>
+                <img src="/image.webp" alt="image" className='w-[98%] lg:w-[95%] mt-5'/>
             </div>
         </div>
 
 
         <div className='flex flex-col text-center justify-center items-center mx-[5%] mt-40 mb-40 overflow-hidden'>
             <Marquee autoFill className='z-[-1]'>
-                <img style={{width: "200px"}} className='mx-16 opacity-50' src="../../public/asana.png" alt="asana" />
+                <img style={{width: "200px"}} className='mx-16 opacity-50' src="/asana.png" alt="asana" />
                 <p className='text-4xl opacity-50'>|</p>
-                <img style={{width: "200px"}} className='mx-16 opacity-50' src="../../public/classpass.png" alt="asana" />
+                <img style={{width: "200px"}} className='mx-16 opacity-50' src="/classpass.png" alt="asana" />
                 <p className='text-4xl opacity-50'>|</p>
-                <img style={{width: "200px"}} className='mx-16 opacity-50' src="../../public/afterpay.png" alt="asana" />
+                <img style={{width: "200px"}} className='mx-16 opacity-50' src="/afterpay.png" alt="asana" />
                 <p className='text-4xl opacity-50'>|</p>
-                <img style={{width: "200px"}} className='mx-16 opacity-50' src="../../public/hotjar.png" alt="asana" />
+                <img style={{width: "200px"}} className='mx-16 opacity-50' src="/hotjar.png" alt="asana" />
                 <p className='text-4xl opacity-50'>|</p>
-                <img style={{width: "200px"}} className='mx-16 opacity-50' src="../../public/maze.png" alt="asana" />
+                <img style={{width: "200px"}} className='mx-16 opacity-50' src="/maze.png" alt="asana" />
                 <p className='text-4xl opacity-50'>|</p>
             </Marquee>
         </div>
@@ -113,7 +113,7 @@ export default function Home() {
         <div className='flex flex-col lg:flex-row lg:flex-row-reverse justify-center items-center mx-[5%] mt-24 mb-20'>
 
             <div className='lg:ml-20 mx-auto'>
-                <FeatureImage imgUrl={'../../public/image2.webp'} alt={'image2'} xValue={-100} yValue={50}/>
+                <FeatureImage imgUrl={'/image2.webp'} alt={'image2'} xValue={-100} yValue={50}/>
             </div>
 
             <div className='flex flex-col'>
@@ -134,7 +134,7 @@ export default function Home() {
         <div className='flex flex-col lg:flex-row justify-center items-center mx-[5%] mt-24 mb-20'>
 
             <div className='lg:mr-20 mx-auto'>
-                <FeatureImage imgUrl={'../../public/image3.webp'} alt={'image3'} xValue={100} yValue={50}/>
+                <FeatureImage imgUrl={'/image3.webp'} alt={'image3'} xValue={100} yValue={50}/>
             </div>
 
             <div className='flex flex-col items-left'>
@@ -197,7 +197,7 @@ export default function Home() {
             </div>
 
             <div className='lg:ml-20 mx-auto'>
-                <FeatureImage imgUrl={'../../public/image4.webp'} alt={'image4'} xValue={-100} yValue={50}/>
+                <FeatureImage imgUrl={'/image4.webp'} alt={'image4'} xValue={-100} yValue={50}/>
             </div>
         </div>
 
@@ -225,27 +225,27 @@ export default function Home() {
         <div className='flex flex-col lg:flex-row justify-center items-center mt-24 mb-20 mx-auto overflow-hidden'>
             <Marquee direction="up" className='z-[-1] h-[480px] md:h-[600px]'>
                 <div className='flex flex-col justify-center items-center text-center bg-[#131412] py-16 px-12 rounded-3xl'>
-                    <img className='my-3' style={{width: '200px'}} src="../../public/asana.png" alt="asana"/>
+                    <img className='my-3' style={{width: '200px'}} src="/asana.png" alt="asana"/>
                     <h1 className='text-4xl my-2 text-[#a0e00d]'>Asana</h1>
                     <p className='text-xl my-1'>Notion is a versatile all-in-one<br/>workspace application</p>
                 </div>
                 <div className='flex flex-col justify-center items-center text-center bg-[#131412] py-16 px-12 rounded-3xl'>
-                    <img className='my-3' style={{width: '200px'}} src="../../public/afterpay.png" alt="afterpay"/>
+                    <img className='my-3' style={{width: '200px'}} src="/afterpay.png" alt="afterpay"/>
                     <h1 className='text-4xl my-2 text-[#a0e00d]'>AfterPay</h1>
                     <p className='text-xl my-1'>Notion is a versatile all-in-one<br/>workspace application</p>
                 </div>
                 <div className='flex flex-col justify-center items-center text-center bg-[#131412] py-16 px-12 rounded-3xl'>
-                    <img className='my-3' style={{width: '200px'}} src="../../public/classpass.png" alt="classpass"/>
+                    <img className='my-3' style={{width: '200px'}} src="/classpass.png" alt="classpass"/>
                     <h1 className='text-4xl my-2 text-[#a0e00d]'>ClassPass</h1>
                     <p className='text-xl my-1'>Notion is a versatile all-in-one<br/>workspace application</p>
                 </div>
                 <div className='flex flex-col justify-center items-center text-center bg-[#131412] py-16 px-12 rounded-3xl'>
-                    <img className='my-3' style={{width: '200px'}} src="../../public/hotjar.png" alt="hotjar"/>
+                    <img className='my-3' style={{width: '200px'}} src="/hotjar.png" alt="hotjar"/>
                     <h1 className='text-4xl my-2 text-[#a0e00d]'>HotJar</h1>
                     <p className='text-xl my-1'>Notion is a versatile all-in-one<br/>workspace application</p>
                 </div>
                 <div className='flex flex-col justify-center items-center text-center bg-[#131412] py-16 px-12 rounded-3xl'>
-                    <img className='my-3' style={{width: '200px'}} src="../../public/maze.png" alt="maze"/>
+                    <img className='my-3' style={{width: '200px'}} src="/maze.png" alt="maze"/>
                     <h1 className='text-4xl my-2 text-[#a0e00d]'>Maze</h1>
                     <p className='text-xl my-1'>Notion is a versatile all-in-one<br/>workspace application</p>
                 </div>
@@ -253,27 +253,27 @@ export default function Home() {
 
             <Marquee direction="down" className='invisible lg:visible z-[-1] lg:h-[480px] h-[0px]'>
                 <div className='flex flex-col justify-center items-center text-center bg-[#131412] py-16 px-12 rounded-3xl'>
-                    <img className='my-3' style={{width: '200px'}} src="../../public/asana.png" alt="asana"/>
+                    <img className='my-3' style={{width: '200px'}} src="/asana.png" alt="asana"/>
                     <h1 className='text-4xl my-2 text-[#a0e00d]'>Asana</h1>
                     <p className='text-xl my-1'>Notion is a versatile all-in-one<br/>workspace application</p>
                 </div>
                 <div className='flex flex-col justify-center items-center text-center bg-[#131412] py-16 px-12 rounded-3xl'>
-                    <img className='my-3' style={{width: '200px'}} src="../../public/afterpay.png" alt="afterpay"/>
+                    <img className='my-3' style={{width: '200px'}} src="/afterpay.png" alt="afterpay"/>
                     <h1 className='text-4xl my-2 text-[#a0e00d]'>AfterPay</h1>
                     <p className='text-xl my-1'>Notion is a versatile all-in-one<br/>workspace application</p>
                 </div>
                 <div className='flex flex-col justify-center items-center text-center bg-[#131412] py-16 px-12 rounded-3xl'>
-                    <img className='my-3' style={{width: '200px'}} src="../../public/classpass.png" alt="classpass"/>
+                    <img className='my-3' style={{width: '200px'}} src="/classpass.png" alt="classpass"/>
                     <h1 className='text-4xl my-2 text-[#a0e00d]'>ClassPass</h1>
                     <p className='text-xl my-1'>Notion is a versatile all-in-one<br/>workspace application</p>
                 </div>
                 <div className='flex flex-col justify-center items-center text-center bg-[#131412] py-16 px-12 rounded-3xl'>
-                    <img className='my-3' style={{width: '200px'}} src="../../public/hotjar.png" alt="hotjar"/>
+                    <img className='my-3' style={{width: '200px'}} src="/hotjar.png" alt="hotjar"/>
                     <h1 className='text-4xl my-2 text-[#a0e00d]'>HotJar</h1>
                     <p className='text-xl my-1'>Notion is a versatile all-in-one<br/>workspace application</p>
                 </div>
                 <div className='flex flex-col justify-center items-center text-center bg-[#131412] py-16 px-12 rounded-3xl'>
-                    <img className='my-3' style={{width: '200px'}} src="../../public/maze.png" alt="maze"/>
+                    <img className='my-3' style={{width: '200px'}} src="/maze.png" alt="maze"/>
                     <h1 className='text-4xl my-2 text-[#a0e00d]'>Maze</h1>
                     <p className='text-xl my-1'>Notion is a versatile all-in-one<br/>workspace application</p>
                 </div>
@@ -305,7 +305,7 @@ export default function Home() {
                 <div className='w-[420px] mx-4 my-6 text-left text-lg text-white bg-[#131412] p-8 rounded-xl border border-[#a0e00d]'>
                     <p>"I've tried many project management tools, but Saasta stands out for its simplicity and effectiveness. It has everything we need to stay organized and collaborate effectively. Our projects have never been smoother!"</p>
                     <div className='flex items-center mt-5'>
-                        <img className="rounded-xl" src="../../public/emily.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
+                        <img className="rounded-xl" src="/emily.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
                         <div className="ml-4">
                             <h1 className='text-2xl'>Emily Johnson</h1>
                             <p className='text-sm text-gray-400'>Founder of StartUpX</p>
@@ -316,7 +316,7 @@ export default function Home() {
                 <div className='w-[420px] mx-4 my-6 text-left text-lg text-white bg-[#131412] p-8 rounded-xl border border-[#a0e00d]'>
                     <p>"Saasta has been a game-changer for our team. Its intuitive interface and powerful features have helped us streamline our project management processes and boost productivity. Highly recommended!"</p>
                     <div className='flex items-center mt-5'>
-                        <img className="rounded-xl" src="../../public/michel.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
+                        <img className="rounded-xl" src="/michel.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
                         <div className="ml-4">
                             <h1 className='text-2xl'>Michael Brown</h1>
                             <p className='text-sm text-gray-400'>Project Manager at Global Innovations</p>
@@ -327,7 +327,7 @@ export default function Home() {
                 <div className='w-[420px] mx-4 my-6 text-left text-lg text-white bg-[#131412] p-8 rounded-xl border border-[#a0e00d]'>
                     <p>"As an IT manager, security is a top priority for me. Saasta's robust security measures and compliance standards give me peace of mind knowing that our data is safe and protected."</p>
                     <div className='flex items-center mt-5'>
-                        <img className="rounded-xl" src="../../public/devid.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
+                        <img className="rounded-xl" src="/devid.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
                         <div className="ml-4">
                             <h1 className='text-2xl'>David Johnson</h1>
                             <p className='text-sm text-gray-400'>Marketing Director, Sparkle Brands</p>
@@ -338,7 +338,7 @@ export default function Home() {
                 <div className='w-[420px] mx-4 my-6 text-left text-lg text-white bg-[#131412] p-8 rounded-xl border border-[#a0e00d]'>
                     <p>"Saasta has transformed the way our marketing team operates. Its collaborative features and have improved communication and coordination, leading to more successful campaigns and happier clients."</p>
                     <div className='flex items-center mt-5'>
-                        <img className="rounded-xl" src="../../public/sarah.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
+                        <img className="rounded-xl" src="/sarah.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
                         <div className="ml-4">
                             <h1 className='text-2xl'>Sarah Miller</h1>
                             <p className='text-sm text-gray-400'>Marketing Director at Digital Agency</p>
@@ -351,7 +351,7 @@ export default function Home() {
                 <div className='w-[420px] mx-4 my-6 text-left text-lg text-white bg-[#131412] p-8 rounded-xl  border border-[#a0e00d]'>
                     <p>"I've tried many project management tools, but Saasta stands out for its simplicity and effectiveness. It has everything we need to stay organized and collaborate effectively. Our projects have never been smoother!"</p>
                     <div className='flex items-center mt-5'>
-                        <img className="rounded-xl" src="../../public/emily.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
+                        <img className="rounded-xl" src="/emily.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
                         <div className="ml-4">
                             <h1 className='text-2xl'>Emily Johnson</h1>
                             <p className='text-sm text-gray-400'>Founder of StartUpX</p>
@@ -362,7 +362,7 @@ export default function Home() {
                 <div className='w-[420px] mx-4 my-6 text-left text-lg text-white bg-[#131412] p-8 rounded-xl  border border-[#a0e00d]'>
                     <p>"Saasta has been a game-changer for our team. Its intuitive interface and powerful features have helped us streamline our project management processes and boost productivity. Highly recommended!"</p>
                     <div className='flex items-center mt-5'>
-                        <img className="rounded-xl" src="../../public/michel.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
+                        <img className="rounded-xl" src="/michel.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
                         <div className="ml-4">
                             <h1 className='text-2xl'>Michael Brown</h1>
                             <p className='text-sm text-gray-400'>Project Manager at Global Innovations</p>
@@ -373,7 +373,7 @@ export default function Home() {
                 <div className='w-[420px] mx-4 my-6 text-left text-lg text-white bg-[#131412] p-8 rounded-xl  border border-[#a0e00d]'>
                     <p>"As an IT manager, security is a top priority for me. Saasta's robust security measures and compliance standards give me peace of mind knowing that our data is safe and protected."</p>
                     <div className='flex items-center mt-5'>
-                        <img className="rounded-xl" src="../../public/devid.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
+                        <img className="rounded-xl" src="/devid.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
                         <div className="ml-4">
                             <h1 className='text-2xl'>David Johnson</h1>
                             <p className='text-sm text-gray-400'>Marketing Director, Sparkle Brands</p>
@@ -384,7 +384,7 @@ export default function Home() {
                 <div className='w-[420px] mx-4 my-6 text-left text-lg text-white bg-[#131412] p-8 rounded-xl  border border-[#a0e00d]'>
                     <p>"Saasta has transformed the way our marketing team operates. Its collaborative features and have improved communication and coordination, leading to more successful campaigns and happier clients."</p>
                     <div className='flex items-center mt-5'>
-                        <img className="rounded-xl" src="../../public/sarah.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
+                        <img className="rounded-xl" src="/sarah.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
                         <div className="ml-4">
                             <h1 className='text-2xl'>Sarah Miller</h1>
                             <p className='text-sm text-gray-400'>Marketing Director at Digital Agency</p>

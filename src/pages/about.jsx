@@ -40,7 +40,7 @@ export default function About() {
                     </p>
                 </div>
             </div>
-            <img src='../../public/aboutPageMain.webp' className='rounded-3xl'/>
+            <img src='/aboutPageMain.webp' className='rounded-3xl'/>
         </div>
 
 
@@ -71,22 +71,22 @@ export default function About() {
                 </div> 
             </div>
             <div className='md:w-[50%] text-lg mx-10 my-5'>
-                <img src="../../public/about1.webp" alt="" className='rounded-3xl h-full'/>
+                <img src="/about1.webp" alt="" className='rounded-3xl h-full'/>
             </div>
         </div>
 
 
         <div className='flex flex-col text-center justify-center items-center mx-[5%] mt-40 mb-40 overflow-hidden'>
             <Marquee autoFill className='z-[-1]'>
-                <img style={{width: "150px"}} className='mx-16 opacity-50' src="../../public/asana.png" alt="asana" />
+                <img style={{width: "150px"}} className='mx-16 opacity-50' src="/asana.png" alt="asana" />
                 <p className='text-3xl opacity-50'>|</p>
-                <img style={{width: "150px"}} className='mx-16 opacity-50' src="../../public/classpass.png" alt="asana" />
+                <img style={{width: "150px"}} className='mx-16 opacity-50' src="/classpass.png" alt="asana" />
                 <p className='text-3xl opacity-50'>|</p>
-                <img style={{width: "150px"}} className='mx-16 opacity-50' src="../../public/afterpay.png" alt="asana" />
+                <img style={{width: "150px"}} className='mx-16 opacity-50' src="/afterpay.png" alt="asana" />
                 <p className='text-3xl opacity-50'>|</p>
-                <img style={{width: "150px"}} className='mx-16 opacity-50' src="../../public/hotjar.png" alt="asana" />
+                <img style={{width: "150px"}} className='mx-16 opacity-50' src="/hotjar.png" alt="asana" />
                 <p className='text-3xl opacity-50'>|</p>
-                <img style={{width: "150px"}} className='mx-16 opacity-50' src="../../public/maze.png" alt="asana" />
+                <img style={{width: "150px"}} className='mx-16 opacity-50' src="/maze.png" alt="asana" />
                 <p className='text-3xl opacity-50'>|</p>
             </Marquee>
         </div>
@@ -131,7 +131,7 @@ export default function About() {
 
             <div className='md:grid md:grid-cols-3 md:gap-x-4 md:mx-10'>
                 <div className='flex flex-col items-center justify-center text-center mx-auto my-10 w-[350px] md:w-full'>
-                    <img src="../../public/michel.webp" alt="" width={"70px"} height={"70px"} className='rounded-[50px]'/>
+                    <img src="/michel.webp" alt="" width={"70px"} height={"70px"} className='rounded-[50px]'/>
                     <h1 className='text-2xl mt-3'>John Doe</h1>
                     <h2 className='text-[19px] mb-2'>CEO and Co-Founder</h2>
                     <p>John is a seasoned entrepreneur with over a decade of experience in the tech industry. As CEO and co-founder of Saasta.</p>
@@ -148,7 +148,7 @@ export default function About() {
                     </div>
                 </div>
                 <div className='flex flex-col items-center justify-center text-center mx-auto my-10 w-[350px] md:w-full'>
-                    <img src="../../public/emily.webp" alt="" width={"70px"} height={"20px"} className='rounded-[50px]'/>
+                    <img src="/emily.webp" alt="" width={"70px"} height={"20px"} className='rounded-[50px]'/>
                     <h1 className='text-2xl mt-3'>Emily Smith</h1>
                     <h2 className='text-[19px] mb-2'>Product Manager</h2>
                     <p>John is a seasoned entrepreneur with over a decade of experience in the tech industry. As CEO and co-founder of Saasta.</p>
@@ -165,7 +165,7 @@ export default function About() {
                     </div>
                 </div>
                 <div className='flex flex-col items-center justify-center text-center mx-auto my-10 w-[350px] md:w-full'>
-                    <img src="../../public/sarah.webp" alt="" width={"70px"} height={"20px"} className='rounded-[50px]'/>
+                    <img src="/sarah.webp" alt="" width={"70px"} height={"20px"} className='rounded-[50px]'/>
                     <h1 className='text-2xl mt-3'>Michael Johnson</h1>
                     <h2 className='text-[19px] mb-2'>Michael Johnson</h2>
                     <p>John is a seasoned entrepreneur with over a decade of experience in the tech industry. As CEO and co-founder of Saasta.</p>
@@ -182,7 +182,7 @@ export default function About() {
                     </div>
                 </div>
                 <div className='flex flex-col items-center justify-center text-center mx-auto my-10 w-[350px] md:w-full'>
-                    <img src="../../public/michel.webp" alt="" width={"70px"} height={"20px"} className='rounded-[50px]'/>
+                    <img src="/michel.webp" alt="" width={"70px"} height={"20px"} className='rounded-[50px]'/>
                     <h1 className='text-2xl mt-3'>Sarah Miller</h1>
                     <h2 className='text-[19px] mb-2'>Marketing Director</h2>
                     <p>John is a seasoned entrepreneur with over a decade of experience in the tech industry. As CEO and co-founder of Saasta.</p>
@@ -199,7 +199,7 @@ export default function About() {
                     </div>
                 </div>
                 <div className='flex flex-col items-center justify-center text-center mx-auto my-10 w-[350px] md:w-full'>
-                    <img src="../../public/sarah.webp" alt="" width={"70px"} height={"70px"} className='rounded-[50px]'/>
+                    <img src="/sarah.webp" alt="" width={"70px"} height={"70px"} className='rounded-[50px]'/>
                     <h1 className='text-2xl mt-3'>David Thompson</h1>
                     <h2 className='text-[19px] mb-2'>Head of Customer Success</h2>
                     <p>John is a seasoned entrepreneur with over a decade of experience in the tech industry. As CEO and co-founder of Saasta.</p>
@@ -216,7 +216,7 @@ export default function About() {
                     </div>
                 </div>
                 <div className='flex flex-col items-center justify-center text-center mx-auto my-10 w-[350px] md:w-full'>
-                    <img src="../../public/emily.webp" alt="" width={"70px"} height={"20px"} className='rounded-[50px]'/>
+                    <img src="/emily.webp" alt="" width={"70px"} height={"20px"} className='rounded-[50px]'/>
                     <h1 className='text-2xl mt-3'>Smith John</h1>
                     <h2 className='text-[19px] mb-2'>Product Manager</h2>
                     <p>John is a seasoned entrepreneur with over a decade of experience in the tech industry. As CEO and co-founder of Saasta.</p>
@@ -245,7 +245,7 @@ export default function About() {
                 <div className='w-[420px] mx-4 my-6 text-left text-lg text-white bg-[#131412] p-8 rounded-xl border border-[#a0e00d]'>
                     <p>"I've tried many project management tools, but Saasta stands out for its simplicity and effectiveness. It has everything we need to stay organized and collaborate effectively. Our projects have never been smoother!"</p>
                     <div className='flex items-center mt-5'>
-                        <img className="rounded-xl" src="../../public/emily.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
+                        <img className="rounded-xl" src="/emily.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
                         <div className="ml-4">
                             <h1 className='text-2xl'>Emily Johnson</h1>
                             <p className='text-sm text-gray-400'>Founder of StartUpX</p>
@@ -256,7 +256,7 @@ export default function About() {
                 <div className='w-[420px] mx-4 my-6 text-left text-lg text-white bg-[#131412] p-8 rounded-xl border border-[#a0e00d]'>
                     <p>"Saasta has been a game-changer for our team. Its intuitive interface and powerful features have helped us streamline our project management processes and boost productivity. Highly recommended!"</p>
                     <div className='flex items-center mt-5'>
-                        <img className="rounded-xl" src="../../public/michel.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
+                        <img className="rounded-xl" src="/michel.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
                         <div className="ml-4">
                             <h1 className='text-2xl'>Michael Brown</h1>
                             <p className='text-sm text-gray-400'>Project Manager at Global Innovations</p>
@@ -267,7 +267,7 @@ export default function About() {
                 <div className='w-[420px] mx-4 my-6 text-left text-lg text-white bg-[#131412] p-8 rounded-xl border border-[#a0e00d]'>
                     <p>"As an IT manager, security is a top priority for me. Saasta's robust security measures and compliance standards give me peace of mind knowing that our data is safe and protected."</p>
                     <div className='flex items-center mt-5'>
-                        <img className="rounded-xl" src="../../public/devid.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
+                        <img className="rounded-xl" src="/devid.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
                         <div className="ml-4">
                             <h1 className='text-2xl'>David Johnson</h1>
                             <p className='text-sm text-gray-400'>Marketing Director, Sparkle Brands</p>
@@ -278,7 +278,7 @@ export default function About() {
                 <div className='w-[420px] mx-4 my-6 text-left text-lg text-white bg-[#131412] p-8 rounded-xl border border-[#a0e00d]'>
                     <p>"Saasta has transformed the way our marketing team operates. Its collaborative features and have improved communication and coordination, leading to more successful campaigns and happier clients."</p>
                     <div className='flex items-center mt-5'>
-                        <img className="rounded-xl" src="../../public/sarah.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
+                        <img className="rounded-xl" src="/sarah.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
                         <div className="ml-4">
                             <h1 className='text-2xl'>Sarah Miller</h1>
                             <p className='text-sm text-gray-400'>Marketing Director at Digital Agency</p>
@@ -291,7 +291,7 @@ export default function About() {
                 <div className='w-[420px] mx-4 my-6 text-left text-lg text-white bg-[#131412] p-8 rounded-xl  border border-[#a0e00d]'>
                     <p>"I've tried many project management tools, but Saasta stands out for its simplicity and effectiveness. It has everything we need to stay organized and collaborate effectively. Our projects have never been smoother!"</p>
                     <div className='flex items-center mt-5'>
-                        <img className="rounded-xl" src="../../public/emily.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
+                        <img className="rounded-xl" src="/emily.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
                         <div className="ml-4">
                             <h1 className='text-2xl'>Emily Johnson</h1>
                             <p className='text-sm text-gray-400'>Founder of StartUpX</p>
@@ -302,7 +302,7 @@ export default function About() {
                 <div className='w-[420px] mx-4 my-6 text-left text-lg text-white bg-[#131412] p-8 rounded-xl  border border-[#a0e00d]'>
                     <p>"Saasta has been a game-changer for our team. Its intuitive interface and powerful features have helped us streamline our project management processes and boost productivity. Highly recommended!"</p>
                     <div className='flex items-center mt-5'>
-                        <img className="rounded-xl" src="../../public/michel.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
+                        <img className="rounded-xl" src="/michel.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
                         <div className="ml-4">
                             <h1 className='text-2xl'>Michael Brown</h1>
                             <p className='text-sm text-gray-400'>Project Manager at Global Innovations</p>
@@ -313,7 +313,7 @@ export default function About() {
                 <div className='w-[420px] mx-4 my-6 text-left text-lg text-white bg-[#131412] p-8 rounded-xl  border border-[#a0e00d]'>
                     <p>"As an IT manager, security is a top priority for me. Saasta's robust security measures and compliance standards give me peace of mind knowing that our data is safe and protected."</p>
                     <div className='flex items-center mt-5'>
-                        <img className="rounded-xl" src="../../public/devid.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
+                        <img className="rounded-xl" src="/devid.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
                         <div className="ml-4">
                             <h1 className='text-2xl'>David Johnson</h1>
                             <p className='text-sm text-gray-400'>Marketing Director, Sparkle Brands</p>
@@ -324,7 +324,7 @@ export default function About() {
                 <div className='w-[420px] mx-4 my-6 text-left text-lg text-white bg-[#131412] p-8 rounded-xl  border border-[#a0e00d]'>
                     <p>"Saasta has transformed the way our marketing team operates. Its collaborative features and have improved communication and coordination, leading to more successful campaigns and happier clients."</p>
                     <div className='flex items-center mt-5'>
-                        <img className="rounded-xl" src="../../public/sarah.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
+                        <img className="rounded-xl" src="/sarah.webp" alt="Emily" style={{width: '70px', height: '70px'}}/>
                         <div className="ml-4">
                             <h1 className='text-2xl'>Sarah Miller</h1>
                             <p className='text-sm text-gray-400'>Marketing Director at Digital Agency</p>
